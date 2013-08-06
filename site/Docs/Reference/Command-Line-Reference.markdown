@@ -482,6 +482,21 @@ Specify the path to the package and your API key to push the package to the serv
     </tr>
 </table>
 
+
+### Excluding dependencies from created packages
+
+Starting from version 2.7, the pack command will ignore &lt;package> entries in the packages.config file which have an attribute **developmentDependency** set to **true** and will not include that package as a dependency in the created package. For example, consider the following packages.config file in the source project:
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<packages>
+		<package id="jQuery" version="1.5.2" />
+		<package id="Modernizr" version="1.7" developmentDependency="true" />
+		<package id="microsoft-web-helpers" version="1.15" />
+	</packages>
+
+When running the pack command on this project, the created package will have a dependency on **jQuery** and **microsoft-web-helpers**, but will *not* have dependency on the **Modernizer**.
+
+
 ### Examples
 
     nuget push foo.nupkg 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
