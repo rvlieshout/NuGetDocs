@@ -218,6 +218,7 @@
     <Content Include="Docs\Workflows\Images\package-visualizer-toolbar.png" />
     <Content Include="Docs\Workflows\Images\package-visualizer.png" />
     <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
     <Content Include="images\close.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\outercurve.png" />
@@ -260,10 +261,9 @@
     <Content Include="_PageStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MarkdownEngine\Heading.cs" />
-    <Compile Include="MarkdownEngine\MarkdownPathFactory.cs" />
-    <Compile Include="MarkdownEngine\MarkdownWebPage.cs" />
-    <Compile Include="MarkdownEngine\Topic.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -383,6 +383,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MarkdownEngine\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

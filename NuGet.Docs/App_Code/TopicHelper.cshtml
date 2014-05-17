@@ -1,4 +1,5 @@
 ﻿@helper RenderTopicsWithSubTopics(string folder) {
+    /*
     <ol class="topics">
         @foreach (var topic in NuGet.Docs.Topic.GetTopicsWithSubTopics(folder).Where(t => t.SubTopics.Any()))
         {
@@ -13,13 +14,16 @@
             </li>
         }
     </ol>
+     */
 }
 
 @helper RenderSubTopics(string topicFolder) {
+    /*
     <ol class="subTopics">
         @foreach (var subTopic in NuGet.Docs.Topic.GetSubTopics(topicFolder))
         {
             <li class="subTopic"><h3><a href="@subTopic.Url">@subTopic.Title</a></h3></li>
         }
     </ol>
+     */
 }
