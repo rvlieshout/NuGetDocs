@@ -270,7 +270,7 @@ PARAMETERS
     <strong>-Id</strong> <string>
         Specifies the Id of the package to search for.
         
-        Required: false
+        Required: true
         
     <strong>-Version</strong>
         Specifies the version of the package to search for. If omitted, defaults to the latest version.
