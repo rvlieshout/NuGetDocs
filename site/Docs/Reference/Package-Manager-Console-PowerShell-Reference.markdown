@@ -89,7 +89,7 @@ PARAMETERS
     PM> Get-Package
     
     
-Returns the packages installed in the default project.
+Returns the packages installed in the entire solution.
     
     PM> Get-Package -ListAvailable
     
@@ -106,7 +106,7 @@ Returns a list of packages available online using "Ninject" as a search term.
     PS> Get-Package -Updates
     
     
-Returns a list of packages installed in the default project that have updates available in the current package source.
+Returns a list of packages installed in the entire solution that have updates available in the current package source.
     
     PM> Get-Package -Recent
     
